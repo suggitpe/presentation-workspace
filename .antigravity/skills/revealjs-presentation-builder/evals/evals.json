@@ -1,0 +1,26 @@
+{
+  "suite_name": "revealjs_presentation_evaluation_suite",
+  "evals": [
+    {
+      "id": "eval_content_isolation",
+      "target_file": "slides.md",
+      "assertions": [
+        { "type": "regex_not_matches", "pattern": "<div\\s+class=[\"']reveal[\"']>" },
+        { "type": "regex_not_matches", "pattern": "<script\\b[^>]*>" }
+      ]
+    },
+    {
+      "id": "eval_slide_delimiters",
+      "target_file": "slides.md",
+      "assertions": [
+        { "type": "regex_matches", "pattern": "^---\\s*$" }
+      ]
+    },
+    {
+      "id": "eval_slide_density",
+      "target_file": "slides.md",
+      "max_bullets_per_slide": 6,
+      "max_words_per_slide": 160
+    }
+  ]
+}

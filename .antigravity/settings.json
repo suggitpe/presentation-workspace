@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "mode": "workspace_trusted",
+    "auto_approve": {
+      "tools": [
+        "read_file",
+        "write_file",
+        "edit_file",
+        "list_directory",
+        "search_files"
+      ],
+      "bash_commands": [
+        "python3 *",
+        "python *",
+        "./scripts/new-presentation.sh *",
+        "./scripts/export-pdf.sh *",
+        "decks/*/export.sh",
+        "git status",
+        "git add *",
+        "git commit *",
+        "Get-ChildItem"
+      ]
+    }
+  }
+}

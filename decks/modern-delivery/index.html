@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Modern Delivery Architecture</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="theme-link">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+    <style>
+      :root { --r-main-font-size: 32px; }
+      .reveal .slides { text-align: left; }
+      .reveal h1, .reveal h2, .reveal h3 { text-align: left; text-transform: none; }
+      .reveal pre code { max-height: 520px; font-size: 0.85em; line-height: 1.35; }
+      @media print {
+        body { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="slides.md"
+                 data-separator="^\r?\n---\r?\n$"
+                 data-separator-vertical="^\r?\n--\r?\n$"
+                 data-separator-notes="^Note:">
+        </section>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const chosenTheme = params.get('theme') || 'black';
+      document.getElementById('theme-link').setAttribute('href', `https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/${chosenTheme}.css`);
+      Reveal.initialize({
+        width: 1920,
+        height: 1080,
+        margin: 0.08,
+        hash: true,
+        slideNumber: 'c/t',
+        showNotes: false,
+        pdfSeparateFragments: false,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
